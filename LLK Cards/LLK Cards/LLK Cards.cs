@@ -34,7 +34,12 @@ namespace LLKCards
         {
             instance = this;
             CustomCard.BuildCard<Rat>();
-            //CustomCard.BuildCard<Ball>();
+            CustomCard.BuildCard<BounceInfinite>();
+            CustomCard.BuildCard<KingKong>();
+            CustomCard.BuildCard<NoWay>();
+            CustomCard.BuildCard<OnePunchMan>();
+            CustomCard.BuildCard<TrollCard>();
+            CustomCard.BuildCard<SniperCard>();
         }
     }
 }

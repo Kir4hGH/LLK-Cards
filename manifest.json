@@ -1,0 +1,15 @@
+{
+    "name": "LLK Cards",
+    "version_number": "0.1.1",
+    "website_url": "https://github.com/Kir4hGH/LLK-Cards",
+    "description": "Adds a number of new cards to the game",
+    "dependencies": [
+        "Pykess-ModdingUtils-0.4.8",
+        "Pykess-CardChoiceSpawnUniqueCardPatch-0.1.10",
+        "Root-CardThemeLib-1.1.7",
+        "Root-RarityLib-1.2.8",
+        "CrazyCoders-RarityBundle-0.1.0",
+        "willis81808-UnboundLib-3.2.13",
+		"BepInEx-BepInExPack_ROUNDS-5.4.1901"
+    ]
+}
