@@ -22,9 +22,6 @@
     <Reference Include="CardThemeLib">
       <HintPath>C:\Users\user\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ROUNDS\profiles\ModMaking\BepInEx\plugins\Root-CardThemeLib\CardThemeLib.dll</HintPath>
     </Reference>
-    <Reference Include="ChaosPoppycarsCards">
-      <HintPath>C:\Users\user\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ROUNDS\profiles\ModMaking\BepInEx\plugins\poppycars-ChaosPoppycarsCards\ChaosPoppycarsCards.dll</HintPath>
-    </Reference>
     <Reference Include="ModdingUtils">
       <HintPath>C:\Users\user\AppData\Roaming\Thunderstore Mod Manager\DataFolder\ROUNDS\profiles\ModMaking\BepInEx\plugins\Pykess-ModdingUtils\ModdingUtils.dll</HintPath>
     </Reference>

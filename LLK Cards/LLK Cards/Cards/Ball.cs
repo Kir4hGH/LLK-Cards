@@ -11,16 +11,19 @@ using UnityEngine;
 
 namespace LLKCards.Cards
 {
-    class Template : CustomCard
+    class Ball : CustomCard
     {
         public override void SetupCard(CardInfo cardInfo, Gun gun, ApplyCardStats cardStats, CharacterStatModifiers statModifiers, Block block)
         {
-            //Применяет статы к самой карте
+            gun.projectileSpeed = 1.5f;
+            gun.reloadTimeAdd = 0.5f;
+            //Edits values on card itself, which are then applied to the player in `ApplyCardStats`
             //UnityEngine.Debug.Log($"[{LLKCards.ModInitials}][Card] {GetTitle()} has been setup.");
         }
         public override void OnAddCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
         {
-            //Применяет статы к персу после выбора карты
+            //Edits values on player when card is selected       
+            gun.damage *= 1.5f;
             //UnityEngine.Debug.Log($"[{LLKCards.ModInitials}][Card] {GetTitle()} has been added to player {player.playerID}.");
         }
         public override void OnRemoveCard(Player player, Gun gun, GunAmmo gunAmmo, CharacterData data, HealthHandler health, Gravity gravity, Block block, CharacterStatModifiers characterStats)
@@ -32,11 +35,11 @@ namespace LLKCards.Cards
 
         protected override string GetTitle()
         {
-            return "Template";
+            return "Ball";
         }
         protected override string GetDescription()
         {
-            return "CardDescription";
+            return "Simple Ball for you";
         }
         protected override GameObject GetCardArt()
         {
@@ -44,8 +47,8 @@ namespace LLKCards.Cards
         }
         protected override CardInfo.Rarity GetRarity()
         {
-            return CardInfo.Rarity.Common;
-            //return RarityUtils.GetRarity("Legendary");
+            //return CardInfo.Rarity.Common;
+            return RarityUtils.GetRarity("Legendary");
         }
         protected override CardInfoStat[] GetStats()
         {
@@ -54,15 +57,29 @@ namespace LLKCards.Cards
                 new CardInfoStat()
                 {
                     positive = true,
-                    stat = "Effect",
-                    amount = "No",
+                    stat = "DMG",
+                    amount = "+50%",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                },
+                new CardInfoStat()
+                {
+                    positive = true,
+                    stat = "Bullet Speed",
+                    amount = "+50%",
+                    simepleAmount = CardInfoStat.SimpleAmount.notAssigned
+                },
+                new CardInfoStat()
+                {
+                    positive = false,
+                    stat = "Reload Time",
+                    amount = "+0.5s",
                     simepleAmount = CardInfoStat.SimpleAmount.notAssigned
                 }
             };
         }
         protected override CardThemeColor.CardThemeColorType GetTheme()
         {
-            return CardThemeColor.CardThemeColorType.ColdBlue;
+            return CardThemeColor.CardThemeColorType.FirepowerYellow;
         }
         public override string GetModName()
         {

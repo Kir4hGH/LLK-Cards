@@ -20,7 +20,7 @@ namespace LLKCards
     {
         private const string ModId = "com.LLK.rounds.LLKCards";
         private const string ModName = "LLK Cards";
-        public const string Version = "0.1.0"; // What version are we on (major.minor.patch)?
+        public const string Version = "0.1.1"; // What version are we on (major.minor.patch)?
         public const string ModInitials = "LLK";
         public static LLKCards instance { get; private set; }
 
@@ -34,6 +34,7 @@ namespace LLKCards
         {
             instance = this;
             CustomCard.BuildCard<Rat>();
+            //CustomCard.BuildCard<Ball>();
         }
     }
 }
